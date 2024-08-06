@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: antiquewhite;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+.nav-parent{
+    max-width: 35rem;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+
+a {
+    color: white;
+} 
+
+
+
+.home-container {
+    flex: 1;
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.home-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home img {
+    width: 9rem;
+    border-radius: 0.5rem;
+}
+
+.intro-content {
+    max-width: 50rem;
+}
+
+.intro-content h1 {
+    font-size: 2.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.intro-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+
+.home-para {
+    font-size: medium;
+    margin-top: 1rem;
+}
+
+footer {
+    background-color: black;
+    padding: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.about-container{
+    flex: 1;
+    flex-wrap: wrap;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.about-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 1rem; */
+}
+
+.desc{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.sub-heading{
+    margin-bottom: 1rem;
+}
+
+.academic-background {
+    margin: 2rem 0;
+}
+
+.academic-background h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.academic-background ul {
+    list-style: none;
+    padding: 0;
+}
+
+.academic-background li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.academic-background li strong {
+    color: #555;
+}
+
+
+.sub-heading-para{
+    margin-bottom: 1rem;
+}
+
+.interest-container{
+    flex: 1;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.interest-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.mma{
+    margin-bottom: 1rem;
+}
+
+.movies{
+    margin-bottom: 1rem;
+}
+
+.tech{
+    margin-bottom: 1rem;
+}
+
+.interest-para{
+    margin-bottom: 1rem;
+}
+
+.skills-container{
+    flex: 1;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.skills-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.skills-para{
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.technical{
+    display: flex;
+    flex-direction: column;
+}
+
+.technical-sub{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills-category {
+    margin-bottom: 1.25rem;
+}
+
+.skills-category h3 {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 0.625rem;
+}
+
+.skills-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-category ul li {
+    margin-bottom: 0.625rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.skills-category ul li strong {
+    color: #000;
+}
+
+.achievements-container{
+    flex: 1;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.achieve-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.achievement-category {
+    margin-bottom: 1.25rem;
+}
+
+.achievement-category h3 {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 0.625rem;
+}
+
+.achievement-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.achievement-category ul li {
+    margin-bottom: 0.625rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.achievement-category ul li strong {
+    color: #000;
+}
+
+.contact-container{
+    flex: 1;
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
+   margin-bottom: 2rem;
+}
+
+.contact-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.form{
+    width: 30rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+    .nav{
+        flex-wrap: wrap;
+        gap: 2rem;
+        flex: 1;
+        margin: 0;
+    }
+    .intro-content h1{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .home-container {
+        max-width: 37.5rem;
+        margin: 0 auto;
+    }
+
+    .form{
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .nav{
+        flex-wrap: wrap;
+        gap: 2rem;
+        flex: 1;
+        margin: 0;
+    }
+    .intro-content h1{
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .home img{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .intro-content h1{
+        text-align: center;
+    }
+    .form{
+        width: 20rem;
+    }
+}
+
