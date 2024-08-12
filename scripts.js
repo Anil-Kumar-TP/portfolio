@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const formGroups = form.querySelectorAll('.form-group');
         let valid = true;
 
-        // Clear previous feedback
+
         feedbackMessage.textContent = '';
         feedbackMessage.style.color = 'red';
 
-        // Remove existing error messages
+        
         formGroups.forEach(group => {
             const existingError = group.querySelector('.error-message');
             if (existingError) {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Check each form field for validation
+    
         formGroups.forEach(group => {
             const input = group.querySelector('input, textarea');
             const error = document.createElement('p');
