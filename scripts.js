@@ -5,18 +5,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-
-        submitBtn.disabled = true;
-        form.reset();
-
-        feedbackMessage.textContent = 'Thank you for your message. We will get back to you shortly!';
-        feedbackMessage.style.color = 'green'; 
-        feedbackMessage.style.marginTop = '15px'; 
-
         
-        setTimeout(() => {
-            submitBtn.disabled = false;
-            feedbackMessage.textContent = ''; 
-        }, 5000);
+        const formGroups = form.querySelectorAll('.form-group');
+        let valid = true;
+
+        // Clear previous feedback
+        feedbackMessage.textContent = '';
+        feedbackMessage.style.color = 'red';
+
+        // Remove existing error messages
+        formGroups.forEach(group => {
+            const existingError = group.querySelector('.error-message');
+            if (existingError) {
+                group.removeChild(existingError);
+            }
+        });
+
+        // Check each form field for validation
+        formGroups.forEach(group => {
+            const input = group.querySelector('input, textarea');
+            const error = document.createElement('p');
+            error.classList.add('error-message');
+            if (!input.value.trim()) {
+                valid = false;
+                error.textContent = 'This field is required';
+                group.appendChild(error);
+            }
+        });
+
+        if (valid) {
+            submitBtn.disabled = true;
+            form.reset();
+
+            feedbackMessage.textContent = 'Thank you for your message. We will get back to you shortly!';
+            feedbackMessage.style.color = 'green';
+            feedbackMessage.style.marginTop = '15px';
+
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                feedbackMessage.textContent = '';
+            }, 5000);
+        }
     });
 });
