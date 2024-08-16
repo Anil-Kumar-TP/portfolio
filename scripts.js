@@ -1,19 +1,29 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const feedbackMessage = document.getElementById('feedbackMessage');
+    const formGroups = form.querySelectorAll('.form-group');
 
+    // Function to remove error message when user starts typing
+    formGroups.forEach(group => {
+        const input = group.querySelector('input, textarea');
+        input.addEventListener('input', function() {
+            const error = group.querySelector('.error-message');
+            if (error) {
+                group.removeChild(error);
+            }
+        });
+    });
+
+    // Form submission event listener
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         
-        const formGroups = form.querySelectorAll('.form-group');
         let valid = true;
-
-
         feedbackMessage.textContent = '';
         feedbackMessage.style.color = 'red';
 
-        
+        // Remove existing error messages before re-validating the form
         formGroups.forEach(group => {
             const existingError = group.querySelector('.error-message');
             if (existingError) {
@@ -21,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-    
+        // Validate each form input field
         formGroups.forEach(group => {
             const input = group.querySelector('input, textarea');
             const error = document.createElement('p');
@@ -36,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (valid) {
             submitBtn.disabled = true;
             form.reset();
-
             feedbackMessage.textContent = 'Thank you for your message. We will get back to you shortly!';
             feedbackMessage.style.color = 'green';
             feedbackMessage.style.marginTop = '15px';
